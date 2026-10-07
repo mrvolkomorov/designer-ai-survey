@@ -261,8 +261,8 @@ textarea { min-height: 80px; resize: vertical; }
           <label class="option"><input type="radio" name="q12_sd" value="Не слышал(а)"><span>Не слышал(а)</span></label>
           <label class="option"><input type="radio" name="q12_sd" value="Слышал(а), не пробовал(а)"><span>Слышал(а), не пробовал(а)</span></label>
           <label class="option"><input type="radio" name="q12_sd" value="Пробовал(а) на готовых сервисах"><span>Пробовал(а) на готовых сервисах (Leonardo, Mage и т.п.)</span></label>
-          <label class="option"><input type="radio" name="q12_sd" value="Запускал(а) локально / в Colab"><span>Запускал(а) локально или в Colab</span></label>
-          <label class="option"><input type="radio" name="q12_sd" value="Использую регулярно для inpaint/outpaint"><span>Использую регулярно для inpaint/outpaint</span></label>
+          <label class="option"><input type="radio" name="q12_sd" value="Запускал(а) в Colab"><span>Запускал(а) локально или в Colab</span></label>
+          <label class="option"><input type="radio" name="q12_sd" value="Регулярно для inpaint/outpaint"><span>Использую регулярно для inpaint/outpaint</span></label>
         </div>
       </div>
 
@@ -448,7 +448,7 @@ textarea { min-height: 80px; resize: vertical; }
 </div>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxGUS92cyAUoJmSERJ5mMUOvcAPrYJL9iLqd2hs5VCDLSWVvokED3ZdjhMz2sDLq7Sw/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby3cE9Rjvx8cswmZiQwa8S_cjI-wtwEEYmgCAxpTXxyvF0y3JS5nuZcPwzP1AwhCs18/exec";
 
 const form = document.getElementById('mainForm');
 const progressBar = document.getElementById('progressBar');
@@ -510,7 +510,7 @@ form.addEventListener('submit', async (e) => {
     form.innerHTML = '<div class="success"><div class="success-icon">✅</div><div class="success-title">Спасибо!</div><div class="success-text">Ваши ответы записаны. Я пришлю персональные рекомендации в течение 1–2 дней.</div></div>';
     window.scrollTo(0, 0);
   } catch (err) {
-    errEl.textContent = 'Ошибка отправки. Попробуйте ещё раз или напишите мне напрямую.';
+    errEl.textContent = 'Ошибка отправки. Поправте ещё раз или напишите мне напрямую.';
     btn.disabled = false;
     btn.textContent = 'Отправить ответы';
   }
